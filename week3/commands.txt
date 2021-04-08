@@ -1,0 +1,7 @@
+$ docker image pull redis:alpine 
+$ docker image pull russmckendrick/moby-counter 
+$ docker network create moby-counter
+$ docker container run -d --name redis --network moby-counter redis:alpine
+$ docker container run -d --name moby-counter --network mobycounter -p 8080:80 russmckendrick/moby-counter
+$ docker container ls
+$ docker container exec moby-counter ping -c 3 redis
