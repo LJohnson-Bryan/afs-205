@@ -1,0 +1,8 @@
+// List Volumes
+$ docker volume ls 
+
+// Remove one or more volumes
+$ docker volume rm dummy-volume
+
+//Remove all unused local volumes
+$ docker volume prune
